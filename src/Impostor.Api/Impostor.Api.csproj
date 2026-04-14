@@ -30,6 +30,9 @@
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
     <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.556" PrivateAssets="all" />
     <PackageReference Include="Impostor.Hazel.Abstractions" Version="1.0.0" />
+    <PackageReference Include="FastBertTokenizer" Version="1.1.30-alpha" />
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.24.4" />
+    <PackageReference Include="Microsoft.ML.Tokenizers" Version="3.0.0-preview.26160.2" />
 
     <ProjectReference Include="..\Impostor.Api.Innersloth.Generator\Impostor.Api.Innersloth.Generator.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer" />
     <AdditionalFiles Include="Innersloth/Data/**/*.json" />

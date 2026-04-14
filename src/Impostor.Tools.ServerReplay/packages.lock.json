@@ -11,6 +11,11 @@
           "Serilog": "3.1.1"
         }
       },
+      "FastBertTokenizer": {
+        "type": "Transitive",
+        "resolved": "1.1.30-alpha",
+        "contentHash": "/t32XvsAD9wxhsKAIOkl6jAE/OOdum88QdxoOsPMLoWTFSsUB9jaJN1ulLOb8iRI5LTw6kSODIxRyxuazJDrIQ=="
+      },
       "Impostor.Hazel": {
         "type": "Transitive",
         "resolved": "1.0.0",
@@ -340,6 +345,28 @@
         "resolved": "8.0.0",
         "contentHash": "bXJEZrW9ny8vjMF1JV253WeLhpEVzFo1lyaZu1vQ4ZxWUlVvknZ/+ftFgVheLubb4eZPSwwxBeqS1JkCOjxd8g=="
       },
+      "Microsoft.ML.OnnxRuntime": {
+        "type": "Transitive",
+        "resolved": "1.24.4",
+        "contentHash": "895huFBVrZkZEGjlsxBSZD3p6D32Cdz6q8DM9UcUps2YKFYdFR8TefaTggFBUTYlvcSyfNTpmOOU/ZkeL69izw==",
+        "dependencies": {
+          "Microsoft.ML.OnnxRuntime.Managed": "1.24.4"
+        }
+      },
+      "Microsoft.ML.OnnxRuntime.Managed": {
+        "type": "Transitive",
+        "resolved": "1.24.4",
+        "contentHash": "e5jsEo0HcCKDMkuRsMSievKoMv10Odv4MGmxbCin8SEm4Pto1qTpwti47xRwMtk9I/zVvfAiFIWquOq/0+22DA==",
+        "dependencies": {
+          "System.Memory": "4.5.5",
+          "System.Numerics.Tensors": "9.0.0"
+        }
+      },
+      "Microsoft.ML.Tokenizers": {
+        "type": "Transitive",
+        "resolved": "3.0.0-preview.26160.2",
+        "contentHash": "K5yGtufhIpY+rZsSPJsg+ABSthQLGML96RVVGIWj6O+l5FTjKNz5ZDKuWNTcfjkOYh1T4qfdl69wJrDXAZg8Eg=="
+      },
       "Serilog": {
         "type": "Transitive",
         "resolved": "3.1.1",
@@ -386,6 +413,16 @@
         "resolved": "8.0.0",
         "contentHash": "fdYxcRjQqTTacKId/2IECojlDSFvp7LP5N78+0z/xH7v/Tuw5ZAxu23Y6PTCRinqyu2ePx+Gn1098NC6jM6d+A=="
       },
+      "System.Memory": {
+        "type": "Transitive",
+        "resolved": "4.5.5",
+        "contentHash": "XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw=="
+      },
+      "System.Numerics.Tensors": {
+        "type": "Transitive",
+        "resolved": "9.0.0",
+        "contentHash": "hyJB4UlpAi19Xr9AXzu2NuagKC4lPfHObNMEAA0HmqFz2rX7wKgzeYzO/jM/eBHDhnUGFFEjk5cOoJaxqg5J4A=="
+      },
       "System.Text.Encodings.Web": {
         "type": "Transitive",
         "resolved": "8.0.0",
@@ -402,16 +439,19 @@
       "impostor.api": {
         "type": "Project",
         "dependencies": {
+          "FastBertTokenizer": "[1.1.30-alpha, )",
           "Impostor.Hazel.Abstractions": "[1.0.0, )",
           "Microsoft.AspNetCore.Http.Abstractions": "[2.2.0, )",
           "Microsoft.Extensions.Hosting.Abstractions": "[8.0.0, )",
-          "Microsoft.Extensions.Logging.Abstractions": "[8.0.0, )"
+          "Microsoft.Extensions.Logging.Abstractions": "[8.0.0, )",
+          "Microsoft.ML.OnnxRuntime": "[1.24.4, )",
+          "Microsoft.ML.Tokenizers": "[3.0.0-preview.26160.2, )"
         }
       },
       "impostor.server": {
         "type": "Project",
         "dependencies": {
-          "Impostor.Api": "[1.9.0-dev, )",
+          "Impostor.Api": "[1.10.6-dev, )",
           "Impostor.Hazel": "[1.0.0, )",
           "Microsoft.Extensions.FileSystemGlobbing": "[8.0.0, )",
           "Microsoft.Extensions.Hosting": "[8.0.0, )",
